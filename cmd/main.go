@@ -30,7 +30,7 @@ func main() {
 		SenderName:   "Golang",
 	}
 
-	err = mailer.SendEmailSMTP([]string{*to}, "Test email", data, "sample_template.txt")
+	err = mailer.SendEmailSMTP(*to, "Test email", data, "sample_template.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
